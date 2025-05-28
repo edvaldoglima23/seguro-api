@@ -1,21 +1,32 @@
 # API de Seguros
 
-API REST para gerenciamento de apólices de seguros utilizando tecnologias modernas do ecossistema Java.
+![Java](https://img.shields.io/badge/Java-11-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7-brightgreen)
+![Hibernate](https://img.shields.io/badge/Hibernate-JPA-blue)
+![Oracle](https://img.shields.io/badge/Oracle-Database-red)
+![WildFly](https://img.shields.io/badge/WildFly-26-orange)
+![Swagger](https://img.shields.io/badge/Swagger-API%20Docs-green)
 
-## Tecnologias Utilizadas
+API REST para gerenciamento de apólices de seguros desenvolvida utilizando tecnologias modernas do ecossistema Java. Esta aplicação demonstra proficiência nas tecnologias solicitadas para posições de desenvolvimento backend Java.
 
-- Java 11
-- Spring Boot 2.7
-- Spring MVC
-- Spring Data JPA
-- Spring Security
-- Hibernate/JPA
-- Oracle Database
-- Mensageria com RabbitMQ
-- Documentação com Swagger
-- WildFly/JBoss (suporte)
+## 🚀 Tecnologias Utilizadas
 
-## Funcionalidades
+- **Backend**:
+  - Java 11
+  - Spring Boot 2.7
+  - Spring MVC para API REST
+  - Spring Data JPA/Hibernate
+  - Spring Security para autenticação e autorização
+  - JBoss/WildFly como servidor de aplicação
+  - Oracle Database com suporte a PL/SQL
+  - RabbitMQ para mensageria
+
+- **Documentação e Testes**:
+  - Swagger/OpenAPI para documentação da API
+  - Validação com Bean Validation
+  - Logs estruturados
+
+## 🔥 Funcionalidades Principais
 
 - CRUD completo de Apólices de Seguro
 - Busca por diversos critérios (número da apólice, tipo de seguro, nome do segurado, CPF/CNPJ)
@@ -23,16 +34,36 @@ API REST para gerenciamento de apólices de seguros utilizando tecnologias moder
 - Consulta de apólices a vencer nos próximos 30 dias
 - Notificações via mensageria para eventos como nova apólice ou vencimento
 - Autenticação e autorização via Spring Security
-- Documentação completa da API via Swagger
+- Integração com procedures PL/SQL do Oracle
 
-## Pré-requisitos
+## 📦 Estrutura do Projeto
 
-- JDK 11+
-- Maven 3.6+
-- Oracle Database
-- RabbitMQ (para funcionalidades de mensageria)
+A aplicação segue uma arquitetura em camadas bem definida:
 
-## Configuração e Execução
+```
+seguro-api/
+├── src/main/java/com/example/seguro/
+│   ├── config/         # Configurações do Spring, Security, RabbitMQ e Swagger
+│   ├── controller/     # Endpoints REST da API
+│   ├── dto/            # Objetos de transferência de dados
+│   ├── model/          # Entidades JPA
+│   ├── repository/     # Repositórios Spring Data JPA
+│   ├── service/        # Lógica de negócio
+│   └── SeguroApiApplication.java  # Classe principal da aplicação
+└── src/main/resources/
+    └── application.properties  # Configurações da aplicação
+```
+
+## 📋 Padrões e Boas Práticas
+
+- **Design Patterns**: Repository, DTO, Service Layer
+- **Clean Code**: Código legível e bem estruturado
+- **RESTful API**: Seguindo as melhores práticas REST
+- **Exception Handling**: Tratamento adequado de exceções
+- **Validação**: Validação de entrada de dados
+- **Segurança**: Implementação de controle de acesso
+
+## 🛠️ Como Executar
 
 1. Clone o repositório
 ```bash
@@ -52,17 +83,7 @@ mvn spring-boot:run
 http://localhost:8080/api/swagger-ui.html
 ```
 
-## Estrutura do Projeto
-
-- `model` - Entidades JPA
-- `repository` - Repositórios Spring Data JPA
-- `service` - Regras de negócio
-- `controller` - Endpoints REST
-- `config` - Configurações do Spring
-- `dto` - Objetos de transferência de dados
-- `exception` - Tratamento de exceções
-
-## Exemplos de Uso
+## 🔍 Exemplos de Uso
 
 ### Criar uma nova apólice
 
@@ -85,4 +106,16 @@ curl -X POST http://localhost:8080/api/apolices \
 
 ```bash
 curl http://localhost:8080/api/apolices/numero/AP123456
-``` 
+```
+
+## 📈 Diferenciais do Projeto
+
+- **Integração com PL/SQL**: Demonstração de conhecimento em Oracle PL/SQL
+- **Mensageria**: Implementação de comunicação assíncrona com RabbitMQ
+- **Documentação**: API completamente documentada com Swagger
+- **Segurança**: Implementação de autenticação e autorização
+- **Código limpo e organizado**: Seguindo as melhores práticas de desenvolvimento
+
+## 🔗 Contato
+
+Para mais informações, entre em contato pelo email: seu-email@example.com 
