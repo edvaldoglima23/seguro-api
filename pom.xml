@@ -46,6 +46,13 @@
 			<scope>runtime</scope>
 		</dependency>
 		
+		<!-- H2 Database para demonstração -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
 		<!-- Mensageria -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -76,13 +83,11 @@
 		</dependency>
 		
 		<!-- Swagger para Documentação da API -->
-		<!--
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-boot-starter</artifactId>
 			<version>3.0.0</version>
 		</dependency>
-		-->
 		
 		<!-- Testes -->
 		<dependency>

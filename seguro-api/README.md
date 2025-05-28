@@ -116,6 +116,3 @@ curl http://localhost:8080/api/apolices/numero/AP123456
 - **Segurança**: Implementação de autenticação e autorização
 - **Código limpo e organizado**: Seguindo as melhores práticas de desenvolvimento
 
-## 🔗 Contato
-
-Para mais informações, entre em contato pelo email: edvaldoglima23@gmail.com 
